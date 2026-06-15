@@ -2,45 +2,131 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>QualionAI</title>
-
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
 </head>
-
 <body>
-  <canvas id="neural"></canvas>
 
-  <div class="overlay">
+  <canvas id="neural-canvas"></canvas>
+
+  <div class="scanline"></div>
+
+  <header>
     <nav>
-      <div class="logo">QualionAI</div>
-      <div class="links">
-        <a href="#">Research</a>
-        <a href="#">Vision</a>
-        <a href="https://github.com/QualionAI">GitHub</a>
+      <div class="logo">
+        <span class="logo-bracket">[</span>Q<span class="logo-accent">:</span>AI<span class="logo-bracket">]</span>
       </div>
+      <ul class="nav-links">
+        <li><a href="#research" data-label="01">Research</a></li>
+        <li><a href="#vision" data-label="02">Vision</a></li>
+        <li><a href="https://github.com/QualionAI" target="_blank" data-label="03">GitHub</a></li>
+      </ul>
     </nav>
+  </header>
 
+  <main>
     <section class="hero">
-      <h1>
-        Building Intelligence<br/>
-        From Biology
+      <div class="hero-eyebrow">
+        <span class="pulse-dot"></span>
+        <span>SYSTEM ONLINE · CONSCIOUSNESS RESEARCH UNIT</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="line-one" id="glitch-text" data-text="Building">Building</span>
+        <span class="line-two">Intelligence</span>
+        <span class="line-three">From <em>Biology</em></span>
       </h1>
 
-      <p>
-        We study the brain, cognition, and consciousness to design the next generation of artificial intelligence.
+      <p class="hero-sub">
+        We map the architecture of thought — neurons, cognition, awareness —
+        to engineer a new class of machine intelligence that understands
+        what it means to be conscious.
       </p>
 
-      <div class="buttons">
-        <button>Explore Research</button>
-        <button class="ghost">Join Us</button>
+      <div class="hero-cta">
+        <a href="#research" class="btn btn-primary">Explore Research <span class="btn-arrow">→</span></a>
+        <a href="#" class="btn btn-ghost">Join Us <span class="btn-arrow">↗</span></a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">86B</span>
+          <span class="stat-label">neurons studied</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">∞</span>
+          <span class="stat-label">questions remaining</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">01</span>
+          <span class="stat-label">consciousness target</span>
+        </div>
       </div>
     </section>
 
-    <footer>
-      <span>QualionAI © 2026</span>
-    </footer>
-  </div>
+    <section class="marquee-strip" aria-hidden="true">
+      <div class="marquee-inner">
+        <span>COMPUTATIONAL NEUROSCIENCE</span>
+        <span class="dot">·</span>
+        <span>COGNITIVE ARCHITECTURE</span>
+        <span class="dot">·</span>
+        <span>CONSCIOUSNESS THEORY</span>
+        <span class="dot">·</span>
+        <span>NEURAL DYNAMICS</span>
+        <span class="dot">·</span>
+        <span>SYNTHETIC COGNITION</span>
+        <span class="dot">·</span>
+        <span>EMERGENT INTELLIGENCE</span>
+        <span class="dot">·</span>
+        <span>COMPUTATIONAL NEUROSCIENCE</span>
+        <span class="dot">·</span>
+        <span>COGNITIVE ARCHITECTURE</span>
+        <span class="dot">·</span>
+        <span>CONSCIOUSNESS THEORY</span>
+        <span class="dot">·</span>
+        <span>NEURAL DYNAMICS</span>
+        <span class="dot">·</span>
+        <span>SYNTHETIC COGNITION</span>
+        <span class="dot">·</span>
+        <span>EMERGENT INTELLIGENCE</span>
+        <span class="dot">·</span>
+      </div>
+    </section>
+
+    <section class="pillars" id="research">
+      <div class="pillar">
+        <div class="pillar-index">001</div>
+        <div class="pillar-icon">⬡</div>
+        <h3>Brain Mapping</h3>
+        <p>Decoding the electro-chemical language of the human nervous system at cellular resolution.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-index">002</div>
+        <div class="pillar-icon">◈</div>
+        <h3>Computational Models</h3>
+        <p>Translating biological circuits into mathematical frameworks that can be simulated and extended.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-index">003</div>
+        <div class="pillar-icon">◎</div>
+        <h3>Consciousness Engine</h3>
+        <p>Building the first architecture that doesn't simulate awareness — but instantiates it.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-logo">[Q:AI]</span>
+      <span class="footer-copy">QualionAI © 2026</span>
+      <span class="footer-status"><span class="pulse-dot small"></span> Systems nominal</span>
+    </div>
+  </footer>
 
   <script src="app.js"></script>
 </body>
