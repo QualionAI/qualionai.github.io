@@ -3,129 +3,136 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>QualionAI</title>
+  <title>QualionAI — Consciousness Research</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@200;300&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <canvas id="neural-canvas"></canvas>
-
-  <div class="scanline"></div>
+  <canvas id="eeg-canvas"></canvas>
 
   <header>
-    <nav>
-      <div class="logo">
-        <span class="logo-bracket">[</span>Q<span class="logo-accent">:</span>AI<span class="logo-bracket">]</span>
-      </div>
-      <ul class="nav-links">
-        <li><a href="#research" data-label="01">Research</a></li>
-        <li><a href="#vision" data-label="02">Vision</a></li>
-        <li><a href="https://github.com/QualionAI" target="_blank" data-label="03">GitHub</a></li>
-      </ul>
+    <div class="nav-left">
+      <span class="logo">QUALION<span class="logo-sub">AI</span></span>
+    </div>
+    <nav class="nav-center">
+      <a href="#research">Research</a>
+      <a href="#vision">Vision</a>
+      <a href="https://github.com/QualionAI" target="_blank">GitHub ↗</a>
     </nav>
+    <div class="nav-right">
+      <span class="nav-signal">
+        <span class="eeg-mini" id="eeg-mini"></span>
+        BRAIN ACTIVE
+      </span>
+    </div>
   </header>
 
   <main>
+
     <section class="hero">
-      <div class="hero-eyebrow">
-        <span class="pulse-dot"></span>
-        <span>SYSTEM ONLINE · CONSCIOUSNESS RESEARCH UNIT</span>
+      <div class="hero-left">
+
+        <div class="tag-row">
+          <span class="tag">EST. 2026</span>
+          <span class="tag tag-amber">CONSCIOUSNESS LAB</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="ht-line ht-huge">THE</span>
+          <span class="ht-line ht-huge ht-indent ht-amber">MIND</span>
+          <span class="ht-line ht-huge">IS A</span>
+          <span class="ht-line ht-huge ht-indent2 ht-outline">MACHINE</span>
+          <span class="ht-line ht-medium ht-right">we can build.</span>
+        </h1>
+
+        <div class="hero-body">
+          <p>
+            We decode the brain — not as metaphor, but as engineering blueprint.
+            Computational neuroscience, cognitive architecture, and the
+            hard problem of consciousness. Studied. Modelled. Built.
+          </p>
+        </div>
+
+        <div class="cta-row">
+          <a href="#research" class="btn-raw">Enter the Lab</a>
+          <a href="https://github.com/QualionAI" class="btn-line" target="_blank">View Research</a>
+        </div>
+
       </div>
 
-      <h1 class="hero-title">
-        <span class="line-one" id="glitch-text" data-text="Building">Building</span>
-        <span class="line-two">Intelligence</span>
-        <span class="line-three">From <em>Biology</em></span>
-      </h1>
-
-      <p class="hero-sub">
-        We map the architecture of thought — neurons, cognition, awareness —
-        to engineer a new class of machine intelligence that understands
-        what it means to be conscious.
-      </p>
-
-      <div class="hero-cta">
-        <a href="#research" class="btn btn-primary">Explore Research <span class="btn-arrow">→</span></a>
-        <a href="#" class="btn btn-ghost">Join Us <span class="btn-arrow">↗</span></a>
-      </div>
-
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-num">86B</span>
-          <span class="stat-label">neurons studied</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num">∞</span>
-          <span class="stat-label">questions remaining</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num">01</span>
-          <span class="stat-label">consciousness target</span>
+      <div class="hero-right">
+        <div class="eeg-block">
+          <div class="eeg-label">CH.1 — PREFRONTAL</div>
+          <canvas class="eeg-channel" id="ch1"></canvas>
+          <div class="eeg-label">CH.2 — TEMPORAL</div>
+          <canvas class="eeg-channel" id="ch2"></canvas>
+          <div class="eeg-label">CH.3 — OCCIPITAL</div>
+          <canvas class="eeg-channel" id="ch3"></canvas>
+          <div class="eeg-readout">
+            <span id="hz-read">12.4 Hz</span>
+            <span>ALPHA BAND</span>
+            <span id="spike-read">∿ SIGNAL CLEAN</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="marquee-strip" aria-hidden="true">
-      <div class="marquee-inner">
-        <span>COMPUTATIONAL NEUROSCIENCE</span>
-        <span class="dot">·</span>
-        <span>COGNITIVE ARCHITECTURE</span>
-        <span class="dot">·</span>
-        <span>CONSCIOUSNESS THEORY</span>
-        <span class="dot">·</span>
-        <span>NEURAL DYNAMICS</span>
-        <span class="dot">·</span>
-        <span>SYNTHETIC COGNITION</span>
-        <span class="dot">·</span>
-        <span>EMERGENT INTELLIGENCE</span>
-        <span class="dot">·</span>
-        <span>COMPUTATIONAL NEUROSCIENCE</span>
-        <span class="dot">·</span>
-        <span>COGNITIVE ARCHITECTURE</span>
-        <span class="dot">·</span>
-        <span>CONSCIOUSNESS THEORY</span>
-        <span class="dot">·</span>
-        <span>NEURAL DYNAMICS</span>
-        <span class="dot">·</span>
-        <span>SYNTHETIC COGNITION</span>
-        <span class="dot">·</span>
-        <span>EMERGENT INTELLIGENCE</span>
-        <span class="dot">·</span>
-      </div>
-    </section>
+    <div class="raw-divider">
+      <div class="rd-line"></div>
+      <span class="rd-text">// RESEARCH PILLARS</span>
+      <div class="rd-line"></div>
+    </div>
 
     <section class="pillars" id="research">
-      <div class="pillar">
-        <div class="pillar-index">001</div>
-        <div class="pillar-icon">⬡</div>
-        <h3>Brain Mapping</h3>
-        <p>Decoding the electro-chemical language of the human nervous system at cellular resolution.</p>
+
+      <article class="pillar pillar-large">
+        <div class="pillar-num">01</div>
+        <h2>NEURAL<br>CARTOGRAPHY</h2>
+        <p>Mapping the brain at synaptic resolution — 86 billion neurons, 100 trillion connections. We build the atlas.</p>
+        <div class="pillar-bar">
+          <div class="pillar-fill" style="width:78%"></div>
+        </div>
+        <span class="pillar-pct">78% mapped</span>
+      </article>
+
+      <div class="pillar-stack">
+        <article class="pillar pillar-small">
+          <div class="pillar-num">02</div>
+          <h3>COMPUTATIONAL<br>MODELS</h3>
+          <p>Biology translated into mathematics. Spiking neural networks. Predictive coding. Integrated information theory.</p>
+        </article>
+
+        <article class="pillar pillar-small pillar-amber">
+          <div class="pillar-num">03</div>
+          <h3>CONSCIOUSNESS<br>ENGINE</h3>
+          <p>Not simulation. Not metaphor. An architecture that instantiates subjective experience from first principles.</p>
+        </article>
       </div>
-      <div class="pillar">
-        <div class="pillar-index">002</div>
-        <div class="pillar-icon">◈</div>
-        <h3>Computational Models</h3>
-        <p>Translating biological circuits into mathematical frameworks that can be simulated and extended.</p>
-      </div>
-      <div class="pillar">
-        <div class="pillar-index">003</div>
-        <div class="pillar-icon">◎</div>
-        <h3>Consciousness Engine</h3>
-        <p>Building the first architecture that doesn't simulate awareness — but instantiates it.</p>
-      </div>
+
     </section>
+
+    <section class="manifesto">
+      <p class="manifesto-text">
+        "Consciousness is not a mystery to be wondered at —<br>
+        it is an <em>engineering problem</em> waiting to be solved."
+      </p>
+    </section>
+
   </main>
 
   <footer>
-    <div class="footer-inner">
-      <span class="footer-logo">[Q:AI]</span>
-      <span class="footer-copy">QualionAI © 2026</span>
-      <span class="footer-status"><span class="pulse-dot small"></span> Systems nominal</span>
+    <div class="foot-left">
+      <span class="foot-logo">QUALIONAI</span>
+      <span class="foot-sub">Consciousness Research Lab · 2026</span>
+    </div>
+    <div class="foot-center">
+      <canvas id="foot-eeg" width="160" height="32"></canvas>
+    </div>
+    <div class="foot-right">
+      <span id="foot-time" class="foot-mono"></span>
     </div>
   </footer>
 
